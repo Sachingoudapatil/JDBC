@@ -7,16 +7,16 @@ import java.sql.SQLException;
 public class TrainRunner {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 			
 			String url="jdbc:mysql://localhost:3306/train";
 			String userName="root";
 			String password="8748095468";
 			
-			Connection connection;
+			Connection connection=null;
 			
 		try {
-			connection=	DriverManager.getConnection(url, userName, password);
+			connection=	DriverManager.getConnection(url,userName,password);
 			
 			if(connection!=null) {
 				System.out.println("connection created ");
@@ -25,7 +25,7 @@ public class TrainRunner {
 				System.out.println("connection not created");
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		}
 		
